@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cal_scores.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="cal_time.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="seq_search.c">
+    <ClCompile Include="factorial.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
