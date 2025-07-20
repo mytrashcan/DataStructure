@@ -16,9 +16,11 @@ int factorial_it(int n) {
 	return result;
 }
 
+/*
 int main(void) {
 	int n;
 	scanf_s("%d", &n);
 	printf("%d의 팩토리얼: %d", n, factorial_it(n));
 	return 0;
 }
+*/

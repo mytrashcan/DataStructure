@@ -18,5 +18,14 @@
     <ClCompile Include="factorial.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="sub.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pow.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="fib.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
