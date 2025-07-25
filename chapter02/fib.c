@@ -21,7 +21,8 @@ int fib_it(int n) {
 	}
 	return result;
 }
-
+/*
 int main(void) {
 	printf("%d", fib_it(33));
 }
+*/

@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="factorial.c" />
     <ClCompile Include="fib.c" />
+    <ClCompile Include="hanoi.c" />
     <ClCompile Include="pow.c" />
     <ClCompile Include="sub.c" />
   </ItemGroup>
