@@ -7,7 +7,7 @@ typedef struct {
 	int expon;  // 지수
 }polynomial;
 
-polynomial terms[MAX_TERMS] = { {8,3}, {7,1}, {1,0}, {10, 3}, {3,2},{1,0} };
+polynomial terms[MAX_TERMS] = { {8,3}, {7,1}, {1,0}, {10, 3}, {3,2}, {1,0} };
 int avail = 6;
 
 // 두 정수 비교
@@ -32,6 +32,7 @@ void attach(float coef, int expon) {
 void poly_add2(int As, int Ae, int Bs, int Be, int* Cs, int* Ce) {
 	float tempcoef;
 	*Cs = avail;
+
 	while (As <= Ae && Bs <= Be) {
 		switch (compare(terms[As].expon, terms[Bs].expon)) {
 		case '>':
