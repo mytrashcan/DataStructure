@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*
-#define MAX_STACK_SIZE 100      // 스택의 최대 크기
+
 typedef int element;
 typedef struct {
-	element data[MAX_STACK_SIZE];
+	element* data;
+	int capacity;
 	int top;
 }StackType;
 
+// 스택 생성자
 void init_stack(StackType* s) {
 	s->top = -1;
+	s->capacity = 1;
+	s->data = (element*)malloc(s->capacity * sizeof(element));
 }
 
 // 공백 검출
@@ -18,15 +21,15 @@ int is_empty(StackType* s) {
 }
 // 포화 상태 검출
 int is_full(StackType* s) {
-	return (s->top == (MAX_STACK_SIZE - 1));
+	return (s->top == s->capacity - 1);
 }
 // push 함수
 void push(StackType* s, element item) {
 	if (is_full(s)) {
-		fprintf(stderr, "stack full\n");
-		return;
+		s->capacity *= 2; // 스택 용량 두배
+		s->data = (element*)realloc(s->data, s->capacity * sizeof(element));
 	}
-	else s->data[++(s->top)] = item;
+	s->data[++(s->top)] = item;
 }
 // pop 함수
 element pop(StackType* s) {
@@ -36,33 +39,16 @@ element pop(StackType* s) {
 	}
 	else return s->data[(s->top)--];
 }
-// peak 함수
-element peak(StackType* s) {
-	if (is_empty(s)) {
-		fprintf(stderr, "stack empty\n");
-		exit(1);
-	}
-	else return s->data[s->top];
-}
 
 int main(void) {
 	StackType s;
-	StackType k;
-
-	init_stack(&k);
 	init_stack(&s);
-
 	push(&s, 1);
 	push(&s, 2);
 	push(&s, 3);
-
-	push(&k, pop(&s));
-	push(&k, pop(&s));
-	push(&k, pop(&s));
-
-	printf("%d\n", pop(&k));
-	printf("%d\n", pop(&k));
-	printf("%d", pop(&k));
+	printf("%d \n", pop(&s));
+	printf("%d \n", pop(&s));
+	printf("%d", pop(&s));
+	free(s.data);
 	return 0;
 }
-*/

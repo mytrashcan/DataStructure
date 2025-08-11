@@ -126,6 +126,7 @@
     <ClCompile Include="intStack.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="mallocStack.c" />
     <ClCompile Include="StackType.c" />
     <ClCompile Include="typeStack.c" />
   </ItemGroup>

@@ -24,5 +24,8 @@
     <ClCompile Include="StackType.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="mallocStack.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
